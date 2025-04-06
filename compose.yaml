@@ -1,0 +1,17 @@
+﻿services:
+  draughts:
+    image: draughts
+    build:
+      context: .
+      dockerfile: Draughts/Dockerfile
+    
+    ports:
+      - "8080:8080"
+      - "8081:8081"
+    environment:
+      - ASPNETCORE_URLS=http://+:8080
+      - ASPNETCORE_ENVIRONMENT=Production
+      
+      #  environment:
+      #    - ASPNETCORE_ENVIRONMENT=Production
+      #    - ASPNETCORE_HTTPS_PORT=8081     
