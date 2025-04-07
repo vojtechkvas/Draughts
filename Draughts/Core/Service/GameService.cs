@@ -1,7 +1,6 @@
 using Draughts.Core.Board;
 using Draughts.Core.Board.Enum;
 using Draughts.Core.Engine;
-using Draughts.Core.Models;
 using Draughts.Infrastructure.Repositories;
 
 namespace Draughts.Core.Service;

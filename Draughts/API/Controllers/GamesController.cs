@@ -1,6 +1,5 @@
 using Draughts.Core.Board;
 using Draughts.Core.Board.Enum;
-using Draughts.Core.Models;
 using Draughts.Core.Service;
 using Microsoft.AspNetCore.Mvc;
 
@@ -29,16 +28,15 @@ public class GamesController : ControllerBase
     {
         Console.WriteLine("CreateGame action called.");
         Console.WriteLine(request);
-      /*  Console.WriteLine($"Received AiTimeLimit: {request?.AiTimeLimit}");
-        Console.WriteLine($"Received AiTimeLimit: {request.AiTimeLimit}");
-        Console.WriteLine($"Received HumanPlayerColor: {request.HumanPlayerColor}");
-        Console.WriteLine($"Received HumanPlayerColor: {request?.HumanPlayerColor}");
-*/
-        Game game = await _gameService.CreateGame(request.HumanPlayerColor, request.AiTimeLimit);
+        /*  Console.WriteLine($"Received AiTimeLimit: {request?.AiTimeLimit}");
+          Console.WriteLine($"Received AiTimeLimit: {request.AiTimeLimit}");
+          Console.WriteLine($"Received HumanPlayerColor: {request.HumanPlayerColor}");
+          Console.WriteLine($"Received HumanPlayerColor: {request?.HumanPlayerColor}");
+  */
+        var game = await _gameService.CreateGame(request.HumanPlayerColor, request.AiTimeLimit);
 
 
         return Ok(game);
-
     }
 
     [HttpGet("{id}")]

@@ -1,7 +1,6 @@
 using Draughts.Core.Board;
 using Draughts.Core.Board.Enum;
 using Draughts.Core.Engine;
-using Draughts.Core.Models;
 
 public class MinimaxEngine : IGameEngine
 {
@@ -18,19 +17,15 @@ public class MinimaxEngine : IGameEngine
 
     public async Task<Move> CalculateBestMove(BoardClass board, PlayerColor color, int timeLimit)
     {
-
         var possibleMoves = board.GetPossibleMoves(color);
- 
-        // Simulate thinking time
+
         await Task.Delay(Math.Min(timeLimit, 500));
 
-        // For now, just return a random move
         return possibleMoves[_random.Next(possibleMoves.Count)];
     }
 
     public double EvaluateBoard(BoardClass board, PlayerColor color)
     {
-        // Simple evaluation: count pieces
         var score = 0;
 
         for (var y = 0; y < board.Size; y++)
@@ -52,7 +47,6 @@ public class MinimaxEngine : IGameEngine
 
     public async Task<Move> GetHint(BoardClass board, PlayerColor color)
     {
-        // For hint, use a shorter time limit
         return await CalculateBestMove(board, color, 1000);
     }
 }

@@ -1,6 +1,5 @@
 using Draughts.Core.Board;
 using Draughts.Core.Board.Enum;
-using Draughts.Core.Models;
 
 namespace Draughts.Core.Engine;
 

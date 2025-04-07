@@ -1,13 +1,9 @@
 using Draughts.Core.Board.Enum;
-using Draughts.Core.Models;
 
 namespace Draughts.Core.Board;
 
 public class Game
 {
-    
-
-    
     public Game(BoardClass boardClass)
     {
         BoardClass = boardClass;

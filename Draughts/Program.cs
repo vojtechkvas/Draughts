@@ -10,7 +10,6 @@ public class Program
     {
         var builder = WebApplication.CreateBuilder(args);
 
-        // ✅ Register MVC Controllers
         builder.Services.AddControllers();
 
         // Swagger
@@ -40,9 +39,8 @@ public class Program
 
         app.UseCors("AllowAll");
 
-        // ✅ Enable routing and controllers
-      //  app.UseAuthorization();
-        app.MapControllers(); // <-- This is critical
+        //  app.UseAuthorization();
+        app.MapControllers();
 
         app.Run();
     }
