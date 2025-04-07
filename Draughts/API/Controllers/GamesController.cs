@@ -3,7 +3,7 @@ using Draughts.Core.Board.Enum;
 using Draughts.Core.Service;
 using Microsoft.AspNetCore.Mvc;
 
-namespace DraughtsGame.API.Controllers;
+namespace Draughts.API.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
